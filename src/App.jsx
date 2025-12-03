@@ -1,17 +1,19 @@
 import {v4 as uuid} from 'uuid';
 import { useState } from 'react';
 
+import './app.css'
+
 function App() {
-  const [list, setList] = useState([])
+  const [list, setList] = useState([]);
+  const [inputTask, setInputTask] = useState('');
 
 
   function inputMudou(event) {
-    console.log(event.target.value);
-    setList([{id: uuid(), task: event.target.value}])
+    setInputTask(event.target.value)
   }
 
   function cliqueiNoBotao() {
-    console.log("Cliquei no botão!")
+    setList([...list, {id: uuid(), inputTask}])
   }
 
   return (
@@ -22,7 +24,7 @@ function App() {
       <ul>
         {
           list.map(item => (
-            <li key={item.id}>{item.task}</li>
+            <li key={item.id}>{item.inputTask}</li>
           ))
         }
       </ul>
