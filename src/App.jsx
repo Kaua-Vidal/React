@@ -1,7 +1,7 @@
 import {v4 as uuid} from 'uuid';
 import { useState } from 'react';
 
-import './app.css'
+import { Container } from './styles'
 
 function App() {
   const [list, setList] = useState([]);
@@ -17,7 +17,7 @@ function App() {
   }
 
   return (
-    <div>
+    <Container>
       <input onChange={inputMudou} type="text" placeholder="O que tenho para fazer..."/>
       <button onClick={cliqueiNoBotao}>Adicionar</button>
 
@@ -28,7 +28,7 @@ function App() {
           ))
         }
       </ul>
-    </div>
+    </Container>
   )
 }
 
