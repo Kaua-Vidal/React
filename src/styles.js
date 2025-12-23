@@ -87,7 +87,7 @@ export const Trash = styled(FcEmptyTrash)`
     }
 
     &:active {
-        transform: scale(1.7);
+        transform: scale(1.8);
     }
 `
 
